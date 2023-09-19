@@ -13,32 +13,36 @@ function randomNumber() {
     const randomNumbers = getRandomNumber (10);
     return randomNumbers; 
 }
-console.log (randomNumber());
+
 
 function changePlay() {
     const valuePlay = select.value;
     const computerPlay = randomNumber(); 
+    console.log (computerPlay, valuePlay); 
     if (valuePlay === "Piedra") {
         if(computerPlay <= 3) {
             btnMessage.innerHTML = 'Empate';   
         }else if (computerPlay >=7){
             btnMessage.innerHTML = 'Has perdido!';  
-        }else (computerPlay ===4 || computerPlay ===5 || computerPlay ===6 )
+        }else {
             btnMessage.innerHTML = 'Has ganado!';
+        }
     } else if (valuePlay === "Papel"){
         if(computerPlay <= 3) {
             btnMessage.innerHTML = 'Has ganado!';   
-        } else if (computerPlay >=7){
+        } else if (computerPlay >= 7){
             btnMessage.innerHTML = 'Empate';  
-        } else (computerPlay ===4 || computerPlay ===5 || computerPlay ===6 )
+        } else {
             btnMessage.innerHTML = 'Has perdido!';
+        }
     } else if (valuePlay === "Tijera"){
         if(computerPlay <= 3) {
             btnMessage.innerHTML = 'Has perdido!';   
-        }else if (computerPlay >=7){
+        }else if (computerPlay >= 7){
             btnMessage.innerHTML = 'Has ganado!';  
-        }else (computerPlay ===4 || computerPlay ===5 || computerPlay ===6 )
+        }else {
             btnMessage.innerHTML = 'Empate';
+        }
     }
 }
 
