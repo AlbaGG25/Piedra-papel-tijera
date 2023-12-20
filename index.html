@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego Piedra, Papel y Tijera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"     crossorigin>
+    <link href="https://fonts.googleapis.com/css2?    family=Merriweather:wght@900&family=Montserrat:wght@700&family=Open+Sans&family=Roboto+Slab:wght@400;500;700&family=Roboto:wght@300;400;500;900&family=Rubik+Doodle+Shadow&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css"/>
+    <title>Piedra, Papel o Tijera</title>
 </head>
-<body>
+<body class="body">
+    <div class="boxTitle">
+      <h1 class="mainTitle">Piedra, Papel o Tijera</h1>
+      <h2 class="title">Introduce aquí tu jugada</h2>
+    </div>
 
-    <h1>Juego Piedra, Papel y Tijera</h1>
-    <h2>Introduce aquí tu jugada</h2>
-
-    <form action="">
-        <select class="js-select">
+    <form action="" class="form">
+        <select class="js-select selectForm">
           <option>Selecciona aquí tu jugada</option>
           <option value="Piedra">Piedra</option>
           <option value="Papel">Papel</option>
           <option value="Tijera">Tijera</option>
         </select>
-        <input type="submit" value="Jugar" class="js-btn"/>
-        <button type="button" value="Vamos a jugar!" class="js-btnMessage">Vamos a jugar!</button>
+        <input type="submit" value="Jugar" class="js-btn btn"/>
+        <p class="js-btnMessage result">Vamos a jugar!</p>
     </form>
 
    <script src="./js/main.js"></script>

@@ -1,0 +1,56 @@
+*{
+ box-sizing: border-box;
+ margin:0;
+ padding:0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    color: #800080;
+}
+.body{
+    background-color: #FFEBCD;
+}
+.boxTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 15rem 7rem;
+}
+
+.mainTitle{
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem; 
+}
+.selectForm{
+    font-family: 'Rubik', sans-serif;
+    color: #800080;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    color: #800080;
+    padding: 1rem;
+    background-color: #DDA0DD;
+    border: none;
+    border-radius: 5px;
+}
+
+.result{
+    font-size: 2rem;
+}

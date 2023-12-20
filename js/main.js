@@ -9,36 +9,44 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
 
-function randomNumber() { 
-    const randomNumbers = getRandomNumber (10);
-    return randomNumbers; 
+  function gamePC () {
+    const randomNumbers = getRandomNumber (9);
+    let valuePc = '';
+    if (randomNumbers <= 3) {
+        valuePc = 'Piedra'
+    } else if (randomNumbers > 3 && randomNumbers < 7){
+        valuePc = 'Tijera'
+    }else {
+        valuePc = 'Papel'
+    }
+    return valuePc;
 }
 
-
-function changePlay() {
-    const valuePlay = select.value;
-    const computerPlay = randomNumber(); 
-    console.log (computerPlay, valuePlay); 
-    if (valuePlay === "Piedra") {
-        if(computerPlay <= 3) {
+function changePlayer() {
+    const userPlay = select.value;
+    const computerPlay = gamePC(); 
+    console.log('ordenador ' + computerPlay);
+    console.log('usuaria ' + userPlay);
+    if (userPlay === "Piedra") {
+        if(computerPlay === "Piedra") {
             btnMessage.innerHTML = 'Empate';   
-        }else if (computerPlay >=7){
+        }else if (computerPlay === "Papel"){
             btnMessage.innerHTML = 'Has perdido!';  
         }else {
             btnMessage.innerHTML = 'Has ganado!';
         }
-    } else if (valuePlay === "Papel"){
-        if(computerPlay <= 3) {
+    } else if (userPlay === "Papel"){
+        if(computerPlay === "Piedra") {
             btnMessage.innerHTML = 'Has ganado!';   
-        } else if (computerPlay >= 7){
+        } else if (computerPlay === "Papel"){
             btnMessage.innerHTML = 'Empate';  
         } else {
             btnMessage.innerHTML = 'Has perdido!';
         }
-    } else if (valuePlay === "Tijera"){
-        if(computerPlay <= 3) {
+    } else if (userPlay === "Tijera"){
+        if(computerPlay === "Piedra") {
             btnMessage.innerHTML = 'Has perdido!';   
-        }else if (computerPlay >= 7){
+        }else if (computerPlay === "Papel"){
             btnMessage.innerHTML = 'Has ganado!';  
         }else {
             btnMessage.innerHTML = 'Empate';
@@ -48,7 +56,7 @@ function changePlay() {
 
 function handleClickPlay(event) {
     event.preventDefault();
-    changePlay();
+    changePlayer();
 }
 
 
